@@ -67,7 +67,7 @@ header {
 .cart{
    position: fixed;
    top: 0;
-   right: 0;
+   right: -100%;
    width: 360px;
    min-height: 100vh;
    padding: 20px;
@@ -231,3 +231,5 @@ header {
 .add-cart:hover{
     background: hsl(249, 32%, 17%);
 }
+
+/* RESPONSIVE */ 
