@@ -40,6 +40,18 @@ function ready(){
       var button = addCart[i];
       button.addEventListener('click', addCartClicked)
     }
+    // buy button work
+    document.getElementsByClassName('btn-buy')[0].addEventListener('click', buyButtonClicked);
+};
+
+// buy button
+function buyButtonClicked(){
+    alert('Su orden fue realizada')
+    var cartContent = document.getElementsByClassName('cart-content')[0]
+    while (cartContent.hasChildNodes()){
+        cartContent.removeChild(cartContent.firstChild);
+    }
+    updateTotal();
 };
 
 //remove items from cart
@@ -47,7 +59,7 @@ function removeCartItem (event){
     var buttonClicked = event.target;
     buttonClicked.parentElement.remove();
     updateTotal();
-};
+}
 //quantity changes
 function quantityChanged(event){
     var input = event.target
@@ -91,6 +103,7 @@ function addProductToCart(title, price, productImg) {
 }
 
 function updateTotal() {
+    var cartContent = document.getElementsByClassName('cart-content')[0];
     var cartBoxes = document.getElementsByClassName("cart-box");
     var total = 0;
     
