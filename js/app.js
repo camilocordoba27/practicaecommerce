@@ -70,6 +70,7 @@ function quantityChanged(event){
 }
 //add to cart
 function addCartClicked (event){
+    alert('Se añadio al carrito correctamente')
     var button = event.target;
     var shopProducts = button .parentElement
     var title = shopProducts.getElementsByClassName('product-title')[0].innerText;
